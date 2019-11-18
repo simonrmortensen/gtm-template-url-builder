@@ -13,12 +13,12 @@ ___INFO___
   "id": "cvt_temp_public_id",
   "version": 1,
   "securityGroups": [],
+  "categories": ["UTILITY"],
   "displayName": "URL Builder",
   "description": "With this variable template, build a complete URL from the input protocols, hostname, URI path, defined query parameters, and fragments. \n\nVery useful for, for instance, building API request URLs.",
   "containerContexts": [
     "WEB"
   ]
-  "categories": ["UTILITY"]
 }
 
 
