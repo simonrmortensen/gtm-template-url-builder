@@ -1,4 +1,4 @@
-﻿___TERMS_OF_SERVICE___
+___TERMS_OF_SERVICE___
 
 By creating or modifying this file you agree to Google Tag Manager's Community
 Template Gallery Developer Terms of Service available at
@@ -13,12 +13,12 @@ ___INFO___
   "id": "cvt_temp_public_id",
   "version": 1,
   "securityGroups": [],
-  "categories": ["UTILITY"],
   "displayName": "URL Builder",
   "description": "With this variable template, build a complete URL from the input protocols, hostname, URI path, defined query parameters, and fragments. \n\nVery useful for, for instance, building API request URLs.",
   "containerContexts": [
     "WEB"
-  ]
+  ], 
+  "categories": ["UTILITY"]
 }
 
 
@@ -159,6 +159,7 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 // Enter your template code here.
 // const log = require('logToConsole');
 const encodeUri = require("encodeUri");
+const encodeUriComponent = require("encodeUriComponent");
 
 // Data variables
 const protocol = data.protocol;
@@ -172,7 +173,7 @@ var returnURL = protocol + hostname + uri;
 // Logic
 if (data.queryParameters){
     for (var i = 0; i < data.queryParameters.length; i++) {
-		queries.push(data.queryParameters[i].key + "=" + data.queryParameters[i].value);
+		queries.push(encodeUriComponent(data.queryParameters[i].key) + "=" + encodeUriComponent(data.queryParameters[i].value));
 	}
   	
   	returnURL += "?" + queries.join("&");
@@ -193,6 +194,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 2019-11-18 08:00:41
+Created on 2019-11-21 14:12:16
 
 
