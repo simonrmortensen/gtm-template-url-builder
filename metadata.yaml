@@ -1,5 +1,5 @@
 homepage: "https://iihnordic.com"
 documentation: "https://github.com/simonrmortensen/gtm-template-url-builder"
 versions:
-  - sha: 07bf2ff3f4aef083786982744ab5d193ce46d867
+  - sha: b0cfdd749cd91ab55cdce23cac1bb7eef7b48c9e
     changeNotes: Initial Release. 
