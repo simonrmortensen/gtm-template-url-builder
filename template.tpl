@@ -17,7 +17,7 @@ ___INFO___
   "description": "With this variable template, build a complete URL from the input protocols, hostname, URI path, defined query parameters, and fragments. \n\nVery useful for, for instance, building API request URLs.",
   "containerContexts": [
     "WEB"
-  ], 
+  ],  
   "categories": ["UTILITY"]
 }
 
@@ -123,7 +123,8 @@ ___TEMPLATE_PARAMETERS___
         ]
       }
     ],
-    "help": "In this table, input the query parameters you\u0027d like to include in your returned URL. Use the left column for query keys and the right column for corresponding values."
+    "help": "In this table, input the query parameters you\u0027d like to include in your returned URL. Use the left column for query keys and the right column for corresponding values.",
+    "newRowButtonText": "Add Query Parameter"
   },
   {
     "type": "CHECKBOX",
@@ -194,6 +195,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 2019-11-21 14:12:16
+Created on 27/11/2019, 12:52:12
 
 
