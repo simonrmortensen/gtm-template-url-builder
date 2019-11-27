@@ -1,5 +1,10 @@
-homepage: "https://iihnordic.com"
+homepage: "https://iihnordic.com?utm_medium=referral&utm_source=gtm-templates&utm_campaign=url-builder"
 documentation: "https://github.com/simonrmortensen/gtm-template-url-builder"
 versions:
+# Current Version
+  - sha: e08e1c2efa546f1794f626238ee0bdfe0fc539a3
+    changeNotes: Update "Add Query Parameters" button
+
+# Old versions
   - sha: b0cfdd749cd91ab55cdce23cac1bb7eef7b48c9e
     changeNotes: Initial Release. 
