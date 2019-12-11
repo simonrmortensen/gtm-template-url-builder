@@ -160,28 +160,25 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 // Enter your template code here.
 // const log = require('logToConsole');
 const encodeUri = require("encodeUri");
-const encodeUriComponent = require("encodeUriComponent");
+const encode = require("encodeUriComponent");
 
 // Data variables
 const protocol = data.protocol;
 const hostname = data.hostname;
 const uri = data.uriPath;
-var queries = [];
+let queries = [];
 const fragment = data.fragment;
 
-var returnURL = protocol + hostname + uri;
+let returnURL = protocol + hostname + uri;
 
 // Logic
 if (data.queryParameters){
-    for (var i = 0; i < data.queryParameters.length; i++) {
-		queries.push(encodeUriComponent(data.queryParameters[i].key) + "=" + encodeUriComponent(data.queryParameters[i].value));
-	}
-  	
+    queries = data.queryParameters.map(x => encode(x.key) + "=" + encode(x.value));
   	returnURL += "?" + queries.join("&");
 }
 
 if (fragment){
-	returnURL += "#" + fragment;
+	returnURL += "#" + encode(fragment);
 }
 
 // Variables must return a value.
