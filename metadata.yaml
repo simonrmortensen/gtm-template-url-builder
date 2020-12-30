@@ -2,10 +2,13 @@ homepage: "https://www.linkedin.com/in/simonrmortensen/"
 documentation: "https://github.com/simonrmortensen/gtm-template-url-builder"
 versions:
 # Current Version
-  - sha: 0acefa6d81893e2b4606451bb8846b02a079dea4
-    changeNotes: Code Refactoring
+  - sha: adf2dcea7ff17636b3c7a319b6aac79b75c2143f
+    changeNotes: Code refactoring, shortening.
 
 # Old versions
+  - sha: 0acefa6d81893e2b4606451bb8846b02a079dea4
+    changeNotes: Code Refactoring
+    
   - sha: e08e1c2efa546f1794f626238ee0bdfe0fc539a3
     changeNotes: Update "Add Query Parameters" button
     
