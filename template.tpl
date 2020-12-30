@@ -162,23 +162,16 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 const encodeUri = require("encodeUri");
 const encode = require("encodeUriComponent");
 
-// Data variables
-const protocol = data.protocol;
-const hostname = data.hostname;
-const uri = data.uriPath;
-let queries = [];
-const fragment = data.fragment;
-
-let returnURL = protocol + hostname + uri;
+let returnURL = data.protocol + data.hostname + data.uriPath;
 
 // Logic
 if (data.queryParameters){
-    queries = data.queryParameters.map(x => encode(x.key) + "=" + encode(x.value));
+    const queries = data.queryParameters.map(x => encode(x.key) + "=" + encode(x.value));
   	returnURL += "?" + queries.join("&");
 }
 
-if (fragment){
-	returnURL += "#" + encode(fragment);
+if (data.fragment){
+	returnURL += "#" + encode(data.fragment);
 }
 
 // Variables must return a value.
